@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#{{ len }}#}
+{#{{ posts }}#}
+<br>
+{% for post in posts %}
+    {{ forloop.counter }}
+    <h1>{{ post.title }}</h1> <br>
+    {{ post.short }} <br>
+    {{ post.published }} <br>
+{% endfor %}
+</body>
+</html>
