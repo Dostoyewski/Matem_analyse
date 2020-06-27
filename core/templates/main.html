@@ -1,18 +1,84 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Математический анализ</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/matem_main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/common.css' %}" />
+    
+    <!-- <link rel="stylesheet" href="{% static 'css/style_home.css' %}" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/media-hover-effects.css' %}" /> -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-{#{{ len }}#}
-{#{{ posts }}#}
-<br>
-{% for post in posts %}
-    {{ forloop.counter }}
-    <h1>{{ post.title }}</h1> <br>
-    {{ post.short }} <br>
-    {{ post.published }} <br>
-{% endfor %}
+    <nav class="nav-extended">     
+        <div class="hat white row nav-wrapper">
+            <div class="col m5 s12 center">
+                <h3 style="margin: 0em; padding: 0.5em;  font-family: Roboto; color: black;">МАТЕМАТИЧЕСКИЙ АНАЛИЗ</h3>            
+            </div>
+
+            <div class="col m5 offset-m1 s12 flex-right-toolbar valign-wrapper">
+                <nav class="white lighten-3 hat-search hoverable">
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" tabindex="1">
+                                <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="nav-content" style="color: white; !important">
+            <div class="row"> 
+                <div class="col m9"> 
+                    <ul class="tabs tabs-transparent center" >
+                    <li class="tab"><a href="#test1">Теория</a></li>
+                    <li class="tab"><a class="active" href="#test2">Практика</a></li>
+                    <li class="tab"><a href="#test3">Объявления</a></li>
+                    </ul>
+                </div>
+                <div class="col m3"></div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="row">
+        <div class="col s12 m9 grid">
+            {#{{ len }}#}
+            {#{{ posts }}#}
+            {% for post in posts %}
+            <figure class="white hard-card hoverable">
+                <h4 style="margin: 0em; padding: 0.5em;  font-family: Roboto;">{{ post.title }}</h4>
+                <br>            
+                <p>{{ post.short }}</p>
+                <br>
+                {{ post.published }} 
+            </figure>
+                <!-- <a href="">Вся телеметрия</a>  -->
+            {% endfor %}
+        </div>
+        <div class="col s12 m3 grid ">
+            
+        </div>        
+    </div>
+    <!-- {#{{ len }}#}
+    {#{{ posts }}#}
+    <br>
+    {% for post in posts %}
+        {{ forloop.counter }}
+        <h1>{{ post.title }}</h1> <br>
+        {{ post.short }} <br>
+        {{ post.published }} <br>
+    {% endfor %} -->
 </body>
 </html>
