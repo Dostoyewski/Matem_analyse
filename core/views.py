@@ -5,7 +5,7 @@ from core.models import Post
 
 def theory_page(request):
     """
-    Main page with blog items
+    Theory page with blog items
     :param request: request
     :return: JSON with objects
     """
@@ -25,12 +25,13 @@ def theory_page(request):
                 'date': str(obj.published).split('+')[0]}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
-                                         'len': num})
+                                         'len': num,
+                                         'page': 0})
 
 
 def practice_page(request):
     """
-    Main page with blog items
+    practice page with blog items
     :param request: request
     :return: JSON with objects
     """
@@ -50,12 +51,13 @@ def practice_page(request):
                 'date': str(obj.published).split('+')[0]}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
-                                         'len': num})
+                                         'len': num,
+                                         'page': 1)
 
 
 def info_page(request):
     """
-    Main page with blog items
+    info page with blog items
     :param request: request
     :return: JSON with objects
     """
@@ -75,4 +77,5 @@ def info_page(request):
                 'date': str(obj.published).split('+')[0]}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
-                                         'len': num})
+                                         'len': num,
+                                         'page': 2})
