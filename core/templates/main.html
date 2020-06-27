@@ -42,9 +42,9 @@
             <div class="row"> 
                 <div class="col m9"> 
                     <ul class="tabs tabs-transparent center" >
-                    <li class="tab"><a href="#test1">Теория</a></li>
-                    <li class="tab"><a class="active" href="#test2">Практика</a></li>
-                    <li class="tab"><a href="#test3">Объявления</a></li>
+                    <li class="tab"><a href="{% url 'theory_page' %}">Теория</a></li>
+                    <li class="tab"><a class="active" href="{% url 'practice_page' %}">Практика</a></li>
+                    <li class="tab"><a href="{% url 'info_page' %}">Объявления</a></li>
                     </ul>
                 </div>
                 <div class="col m3"></div>
