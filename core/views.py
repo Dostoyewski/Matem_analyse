@@ -52,7 +52,7 @@ def practice_page(request):
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
-                                         'page': 1)
+                                         'page': 1})
 
 
 def info_page(request):
