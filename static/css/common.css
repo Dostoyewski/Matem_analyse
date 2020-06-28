@@ -11,8 +11,6 @@ body {
     background-color: #f2f2f2 !important;
 }
 
-     
-
 .latex {
 
 }
@@ -34,7 +32,7 @@ body {
 }
 
 .popup {
-    margin-left: 0.5em;
+    box-shadow: 0px 0px 10px #a8a8a8;
 }
 
 .screen-height-filler {
@@ -146,10 +144,11 @@ body {
     margin-right: 0.5em;
 }
 
-.abs{
-    margin: 0em !important;
+.logo{
+    color: red;
 }
 
-.page-footer{
-    padding: 0em;
+
+.hat .row .nav-wrapper{
+    margin: 0em !important;
 }
