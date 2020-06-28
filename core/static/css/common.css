@@ -1,3 +1,6 @@
+{% load static %}
+
+
 /* fixing browser-related issues */
 
 :focus {
@@ -8,10 +11,18 @@
 /* common initial settings */
 
 body {
-    background-color: #f2f2f2 !important;
+    background-image: url("../images/image.jpg");
+    /* background-color: red; */
+    min-height: 100%;
 }
 
-     
+html{
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}    
 
 .latex {
 
@@ -150,6 +161,15 @@ body {
     margin: 0em !important;
 }
 
-.page-footer{
+.footer{
     padding: 0em;
+    background-color: #2d353b;
+}
+
+.clr{    
+    background-color: #2d353b;
+}
+
+.pix{
+    flex-grow: 1;
 }
