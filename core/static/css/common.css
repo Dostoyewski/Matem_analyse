@@ -173,3 +173,22 @@ html{
 .pix{
     flex-grow: 1;
 }
+
+.date{
+    color: #ffab40;
+    margin-right: 24px;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    text-transform: uppercase;
+}
+
+.email{
+    text-transform: lowercase !important;
+}
+
+.matemhead{
+    margin: 0em;
+    padding: 0.5em;
+    font-family: Roboto; 
+    color: black;
+}
