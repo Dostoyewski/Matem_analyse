@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from core.models import Post
+from django.contrib.admin.models import LogEntry
 
 
 def theory_page(request):
@@ -36,7 +37,24 @@ def theory_page(request):
     # page — section id. If 0 —> theory page, 1 —> practice page, 2 —> info page
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
-                                         'page': 0})
+                                         'page': 0,
+                                         'actions': get_recent_actions()})
+
+
+def get_recent_actions():
+    """
+    Returns all recent actions with database
+    :return:
+    """
+    log = LogEntry.objects.all()
+    log = [str(obj) for obj in log]
+    info = []
+    for rec in log:
+        if "Added" in rec:
+            info.append("Добавлена " + rec.split(sep='Added')[1][2:-2])
+        if "Deleted" in rec:
+            info.append("Удалена " + rec.split(sep='Deleted')[1][2:-2])
+    return info
 
 
 def practice_page(request):
@@ -71,7 +89,8 @@ def practice_page(request):
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
-                                         'page': 1})
+                                         'page': 1,
+                                         'actions': get_recent_actions()})
 
 
 def info_page(request):
@@ -106,4 +125,5 @@ def info_page(request):
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
-                                         'page': 2})
+                                         'page': 2,
+                                         'actions': get_recent_actions()})

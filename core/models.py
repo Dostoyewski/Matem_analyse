@@ -22,3 +22,6 @@ class Post(models.Model):
     type = models.IntegerField(choices=TYPE, default=2)
     # Документ, приложенный к посту
     doc = models.FileField(default=None, blank=True)
+
+    def __str__(self):
+        return "статья " + '"' + str(self.title) + '"'
