@@ -20,3 +20,5 @@ class Post(models.Model):
     published = models.DateTimeField(default=datetime.datetime.now())
     # Тип объявления
     type = models.IntegerField(choices=TYPE, default=2)
+    # Документ, приложенный к посту
+    doc = models.FileField(default=None, blank=True)

@@ -18,12 +18,22 @@ def theory_page(request):
     for obj in query:
         words = obj.text.split(' ')[:10]
         text = ""
+        isFile = obj.doc is not None
         for word in words:
             text += " " + word
+        try:
+            size = round(obj.doc.size / 1024, 1)
+        except:
+            size = 0
+            isFile = False
         post = {'title': obj.title,
                 'short': text + "...",
-                'date': str(obj.published).split('+')[0]}
+                'date': str(obj.published).split('+')[0],
+                'isFile': isFile,
+                'file': obj.doc,
+                'size': size}
         posts.append(post)
+    # page — section id. If 0 —> theory page, 1 —> practice page, 2 —> info page
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
                                          'page': 0})
@@ -44,11 +54,20 @@ def practice_page(request):
     for obj in query:
         words = obj.text.split(' ')[:10]
         text = ""
+        isFile = obj.doc is not None
         for word in words:
             text += " " + word
+        try:
+            size = round(obj.doc.size / 1024, 1)
+        except:
+            size = 0
+            isFile = False
         post = {'title': obj.title,
                 'short': text + "...",
-                'date': str(obj.published).split('+')[0]}
+                'date': str(obj.published).split('+')[0],
+                'isFile': isFile,
+                'file': obj.doc,
+                'size': size}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
@@ -70,11 +89,20 @@ def info_page(request):
     for obj in query:
         words = obj.text.split(' ')[:10]
         text = ""
+        isFile = obj.doc is not None
         for word in words:
             text += " " + word
+        try:
+            size = round(obj.doc.size / 1024, 1)
+        except:
+            size = 0
+            isFile = False
         post = {'title': obj.title,
                 'short': text + "...",
-                'date': str(obj.published).split('+')[0]}
+                'date': str(obj.published).split('+')[0],
+                'isFile': isFile,
+                'file': obj.doc,
+                'size': size}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
