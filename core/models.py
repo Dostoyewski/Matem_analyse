@@ -13,7 +13,7 @@ class Post(models.Model):
     Post with info
     """
     # Название поста
-    title = models.CharField(max_length=50, blank=True)
+    title = models.CharField(max_length=200, blank=True)
     # Полный текст поста
     text = models.CharField(max_length=1000, blank=True)
     # Дата публикации
