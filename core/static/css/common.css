@@ -191,4 +191,13 @@ html{
     padding: 0.5em;
     font-family: Roboto; 
     color: black;
+    
+}
+
+.underpost{
+    margin-bottom: 0em !important;
+}
+
+.postfile{
+    color: cornflowerblue !important;
 }

@@ -1,4 +1,5 @@
 {% load static %}
+{% csrf_token %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,16 +18,24 @@
     <!-- <link rel="stylesheet" href="{% static 'css/media-hover-effects.css' %}" /> -->
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             
 </head>
 <body>      
     <div style="padding: 1em;">
         <nav class="nav-extended">
             <div class="hat white row nav-wrapper abs">
-                <div class="col m6 s12 center valign-wrapper">
-                    <h3 class="matemhead">МАТЕМАТИЧЕСКИЙ АНАЛИЗ</h3>            
+                <div class="center valign-wrapper">
+                    <h3 class="matemhead center">МАТЕРИАЛЫ КУРСА МАТЕМАТИЧЕСКОГО АНАЛИЗА </h3>            
                 </div>
 
-                <div class="col m5 offset-m1 s12 flex-right-toolbar valign-wrapper">
+                <!-- окно поиска информаци -->
+
+                <!-- <div class="col m5 offset-m1 s12 flex-right-toolbar valign-wrapper">
                     <nav class="white lighten-3 hat-search hoverable">
                         <div class="nav-wrapper">
                             <form>
@@ -37,7 +46,8 @@
                             </form>
                         </div>
                     </nav>
-                </div>
+                </div> -->
+
             </div>
             <div class="nav-content" style="color: white; !important">
                 <div class="row clr"> 
@@ -71,15 +81,21 @@
                 <div class="card blue-grey darken-1 hoverable">
                     <div class="card-content white-text">
                     <span class="card-title">{{ post.title }}</span>
-                    <p>{{ post.short }}</p>
-                        {% if post.isFile == True %}
-                            Размер файла: {{ post.size }} Кб<br>
-                            <a href="{{ post.file.url }}">{{ post.file.name }}</a>
-                        {% endif %}
+                    <p>{{ post.text }}</p>
+                        
                     </div>
                     <div class="card-action">
-                    <p class="date">{{ post.date }} </p>
-                    </div>
+                        <div class="row underpost valign-wrapper">
+                            <div class="col m6 s12">
+                                <p class="date">{{ post.date }} </p>
+                            </div>
+                            <div class="col m6 s12 flex-right-toolbar">
+                                {% if post.isFile == True %}
+                                    <a class="postfile " href="{{ post.file.url }}">{{ post.file.name }}</a>
+                                {% endif %}
+                            </div>                    
+                        </div>
+                    </div>                    
                 </div>
             {% endfor %}
             </div>
@@ -99,40 +115,30 @@
                     <a href="mailto:moiseev_aa@spbstu.ru" class="email">moiseev_aa@spbstu.ru</a>
                     </div>
                 </div>                
-            </div> 
-        </div>
-        <!-- <div class="row">
-            <div class="col s12 m9 grid">
-                {#{{ len }}#}
-                {#{{ posts }}#}
-                {% for post in posts %}
-                <figure class="white popup hard-card hoverable">
-                    <h4 style="margin: 0em; padding: 0.5em;  font-family: Roboto;">{{ post.title }}</h4>
-                    <hr  width="80%" >            
-                    <p>{{ post.short }}</p>
-                    <hr  width="80%" >
-                    {{ post.date }} 
-                </figure>
-                {% endfor %}
-            </div> -->
-            <!-- <div class="col s12 m4 grid ">
-                
-            </div>         -->
-        {% for action in actions %}
-            {{ action }}<br>
-        {% endfor %}
+            </div>
+            <div class="col s12 m4 grid right">
+                <div class="card white darken-1 r">
+                    <div class="card-content black-text">
+                    <span class="card-title">Новости</span>
+                    {% for action in actions %}
+                        {% if forloop.counter < 2 %}
+                            {{ action }}<br>
+                        {% endif %}
+                    {% endfor %}
+                    </div>                    
+                </div>                
+            </div>  
+        </div>            
+        
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12">
-                        <p class="grey-text text-lighten-4 left" >© 2020 Moiseev A. A. </p>
-                    </div>
-                    <div class="col l6 s12">
-                        <p class="grey-text text-lighten-4 right">Математика это не наука, это искусство!</p>
-                    </div>
+                    <div class="col s12">
+                        <p class="grey-text text-lighten-4 right" >© 2020 Moiseev A. A. </p>
+                    </div>                    
                 </div>
             </div>
         </footer>
-    </div>   
+    </div>       
 </body>
 </html>
