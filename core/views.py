@@ -32,7 +32,8 @@ def theory_page(request):
                 'date': str(obj.published).split('+')[0],
                 'isFile': isFile,
                 'file': obj.doc,
-                'size': size}
+                'size': size,
+                'text': obj.text}
         posts.append(post)
     # page — section id. If 0 —> theory page, 1 —> practice page, 2 —> info page
     return render(request, 'main.html', {'posts': posts,
@@ -85,7 +86,8 @@ def practice_page(request):
                 'date': str(obj.published).split('+')[0],
                 'isFile': isFile,
                 'file': obj.doc,
-                'size': size}
+                'size': size,
+                'text': obj.text}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
@@ -121,7 +123,8 @@ def info_page(request):
                 'date': str(obj.published).split('+')[0],
                 'isFile': isFile,
                 'file': obj.doc,
-                'size': size}
+                'size': size,
+                'text': obj.text}
         posts.append(post)
     return render(request, 'main.html', {'posts': posts,
                                          'len': num,
