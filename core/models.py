@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 import datetime
 
 TYPE = (
@@ -17,7 +18,7 @@ class Post(models.Model):
     # Полный текст поста
     text = models.CharField(max_length=1000, blank=True)
     # Дата публикации
-    published = models.DateTimeField(default=datetime.datetime.now())
+    published = models.DateTimeField(default=timezone.now)
     # Тип объявления
     type = models.IntegerField(choices=TYPE, default=2)
     # Документ, приложенный к посту
