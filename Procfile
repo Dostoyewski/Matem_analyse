@@ -1,1 +1,1 @@
-web: gunicorn Matem_analyse.wsgi --log-file -
+web: gunicorn Matem_analyse.wsgi:application --log-file -
