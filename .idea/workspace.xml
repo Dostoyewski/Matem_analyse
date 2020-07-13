@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Matem_analyse/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="137" column="71" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="71" />
+            <state relative-caret-position="201">
+              <caret line="145" column="10" lean-forward="true" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
@@ -260,7 +260,7 @@
       <workItem from="1593525304743" duration="13600000" />
       <workItem from="1593949005611" duration="81000" />
       <workItem from="1594637590812" duration="7649000" />
-      <workItem from="1594650121206" duration="1628000" />
+      <workItem from="1594650121206" duration="1706000" />
     </task>
     <task id="LOCAL-00001" summary="Added file uploading">
       <created>1593527559008</created>
@@ -294,7 +294,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23913000" />
+    <option name="totallyTimeSpent" value="23991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -494,8 +494,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Matem_analyse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="137" column="71" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="71" />
+        <state relative-caret-position="201">
+          <caret line="145" column="10" lean-forward="true" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
           <folding>
             <element signature="e#314#323#0" expanded="true" />
           </folding>

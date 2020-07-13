@@ -135,12 +135,12 @@ STATICFILES_DIRS = [
     './core/static/'
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-try:
-    from Matem_analyse.local_settings import *
-except ImportError:
-    pass
+# try:
+#     from Matem_analyse.local_settings import *
+# except ImportError:
+#     pass
