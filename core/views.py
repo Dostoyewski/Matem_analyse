@@ -19,7 +19,7 @@ def theory_page(request):
     for obj in query:
         words = obj.text.split(' ')[:10]
         text = ""
-        isFile = obj.doc is not None
+        isFile = len(obj.doc.name) == 0
         for word in words:
             text += " " + word
         try:
@@ -73,7 +73,7 @@ def practice_page(request):
     for obj in query:
         words = obj.text.split(' ')[:10]
         text = ""
-        isFile = obj.doc is not None
+        isFile = len(obj.doc.name) != 0
         for word in words:
             text += " " + word
         try:
@@ -110,7 +110,7 @@ def info_page(request):
     for obj in query:
         words = obj.text.split(' ')[:10]
         text = ""
-        isFile = obj.doc is not None
+        isFile = len(obj.doc.name) == 0
         for word in words:
             text += " " + word
         try:
