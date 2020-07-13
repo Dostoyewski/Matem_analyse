@@ -32,6 +32,7 @@ def theory_page(request):
                 'date': str(obj.published).split('+')[0],
                 'isFile': isFile,
                 'file': obj.doc,
+                'name_s': len(obj.doc.name),
                 'size': size,
                 'text': obj.text}
         posts.append(post)
@@ -86,6 +87,7 @@ def practice_page(request):
                 'date': str(obj.published).split('+')[0],
                 'isFile': isFile,
                 'file': obj.doc,
+                'name_s': len(obj.doc.name),
                 'size': size,
                 'text': obj.text}
         posts.append(post)
@@ -123,6 +125,7 @@ def info_page(request):
                 'date': str(obj.published).split('+')[0],
                 'isFile': isFile,
                 'file': obj.doc,
+                'name_s': len(obj.doc.name),
                 'size': size,
                 'text': obj.text}
         posts.append(post)

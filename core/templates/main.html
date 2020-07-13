@@ -94,9 +94,11 @@
                                 <p class="date">{{ post.date }} </p>
                             </div>
                             <div class="col m6 s12 flex-right-toolbar">
-                                {% if post.isFile == True %}
+                                {% if post.name_s > 0 %}
                                     <a class="postfile " href="{{ post.file.url }}">{{ post.file.name }}</a>
                                 {% endif %}
+                            {{ post.name_s }}
+                            {{ post.file.name }}
                             </div>
                         </div>
                     </div>                    
