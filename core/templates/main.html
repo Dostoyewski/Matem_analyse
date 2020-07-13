@@ -97,7 +97,8 @@
                                 {% if post.isFile == True %}
                                     <a class="postfile " href="{{ post.file.url }}">{{ post.file.name }}</a>
                                 {% endif %}
-                            </div>                    
+                            {{ post.file.name }}
+                            </div>
                         </div>
                     </div>                    
                 </div>
