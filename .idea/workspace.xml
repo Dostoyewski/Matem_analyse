@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a8427e-cbb2-4caf-a968-434af16e5e4b" name="Default Changelist" comment="Added full post text">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matem_analyse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Matem_analyse/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/Matem_analyse/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
-              <caret line="137" column="79" selection-start-line="137" selection-start-column="79" selection-end-line="137" selection-end-column="79" />
+              <caret line="137" column="71" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="71" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
@@ -43,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2013">
+            <state relative-caret-position="136">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -261,7 +260,7 @@
       <workItem from="1593525304743" duration="13600000" />
       <workItem from="1593949005611" duration="81000" />
       <workItem from="1594637590812" duration="7649000" />
-      <workItem from="1594650121206" duration="1492000" />
+      <workItem from="1594650121206" duration="1628000" />
     </task>
     <task id="LOCAL-00001" summary="Added file uploading">
       <created>1593527559008</created>
@@ -295,18 +294,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23777000" />
+    <option name="totallyTimeSpent" value="23913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27405012" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27405012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,7 +314,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -485,7 +484,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2013">
+        <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -496,7 +495,7 @@
     <entry file="file://$PROJECT_DIR$/Matem_analyse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
-          <caret line="137" column="79" selection-start-line="137" selection-start-column="79" selection-end-line="137" selection-end-column="79" />
+          <caret line="137" column="71" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="71" />
           <folding>
             <element signature="e#314#323#0" expanded="true" />
           </folding>
