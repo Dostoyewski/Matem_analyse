@@ -9,16 +9,6 @@
 	z-index: 1;
 }
 
-.demo-1 .large-header {
-	/* background-image: url("{% static 'images/demo-1-bg.jpg' %}"); */
-	background-image: url('../images/1940038.jpeg');
-}
-
-.demo-2 .large-header {
-	background-image: url('../img/demo-2-bg.jpg');
-	background-position: center bottom;
-}
-
 .demo-3 .large-header {
 	background: #7f8c8d;
 }
