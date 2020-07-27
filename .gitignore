@@ -133,3 +133,6 @@ dmypy.json
 
 # Local settings
 local_settings.py
+
+# media folder
+media/
