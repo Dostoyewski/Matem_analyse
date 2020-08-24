@@ -31,7 +31,7 @@ DEBUG = False
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['aa-moiseev.ru']
+ALLOWED_HOSTS = ['aa-moiseev.ru', 'www.aa-moiseev.ru']
 
 
 # Application definition
