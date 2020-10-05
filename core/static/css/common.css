@@ -11,8 +11,11 @@
 /* common initial settings */
 
 body {    
-    background-attachment: fixed;    
-    min-height: 100%;    
+    background-attachment: fixed;
+}
+
+html{
+    min-height: 100%;
     background:
     -webkit-linear-gradient(270deg, hsla(200, 52.5%, 15.69%, 1) 0%, hsla(200, 52.5%, 15.69%, 0) 32%),
     -webkit-linear-gradient(212deg, hsla(180, 16.28%, 16.86%, 1) 2%, hsla(180, 16.28%, 16.86%, 0) 65%),
@@ -24,11 +27,7 @@ body {
     linear-gradient(238deg, hsla(180, 16.28%, 16.86%, 1) 2%, hsla(180, 16.28%, 16.86%, 0) 65%),
     linear-gradient(340deg, hsla(34.51, 100%, 69.85%, 1) 4%, hsla(34.51, 100%, 69.85%, 0) 40%),
     linear-gradient(135deg, hsla(209, 50.85%, 23.14%, 1) 10%, hsla(209, 50.85%, 23.14%, 0) 84%),
-    linear-gradient(245deg, hsla(180, 59.37%, 84.66%, 1) 100%, hsla(180, 59.37%, 84.66%, 0) 100%);     
-}
-
-html{
-    height: 100%;
+    linear-gradient(245deg, hsla(180, 59.37%, 84.66%, 1) 100%, hsla(180, 59.37%, 84.66%, 0) 100%);   
 }
 
 * {
@@ -123,6 +122,9 @@ html{
     padding: 0 1em;
 }
 
+
+/* common elements */
+
 .hat {
     display: flex;
     flex-direction: row;
@@ -133,6 +135,7 @@ html{
     max-width: 100%;
 }
 
+/* if .logo is inside .col, defines the max height */
 .hat .col {
     height: 9em;
 }
@@ -141,6 +144,9 @@ html{
     height: 95%;
 }
 
+/* the next three blocks are here to hack the
+   builtin materialize search bar and allow
+   custom size */
 .hat-search {
     height: 3em;
     border-radius: 1.5em;
@@ -151,6 +157,8 @@ html{
     line-height: 1.9em !important;
 }
 
+
+/* TODO: move to a proper place */
 .text_for_user {
     font-family: sans-serif;
     font-size: 1.5em;

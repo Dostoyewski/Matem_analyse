@@ -10,14 +10,24 @@
 
 /* common initial settings */
 
-body {
-    background-image: url("../images/image.jpg");
-    /* background-color: red; */
-    min-height: 100%;
+body {    
+    background-attachment: fixed;
 }
 
 html{
-    height: 100%;
+    min-height: 100%;
+    background:
+    -webkit-linear-gradient(270deg, hsla(200, 52.5%, 15.69%, 1) 0%, hsla(200, 52.5%, 15.69%, 0) 32%),
+    -webkit-linear-gradient(212deg, hsla(180, 16.28%, 16.86%, 1) 2%, hsla(180, 16.28%, 16.86%, 0) 65%),
+    -webkit-linear-gradient(110deg, hsla(34.51, 100%, 69.85%, 1) 4%, hsla(34.51, 100%, 69.85%, 0) 40%),
+    -webkit-linear-gradient(315deg, hsla(209, 50.85%, 23.14%, 1) 10%, hsla(209, 50.85%, 23.14%, 0) 84%),
+    -webkit-linear-gradient(205deg, hsla(180, 59.37%, 84.66%, 1) 100%, hsla(180, 59.37%, 84.66%, 0) 100%);
+    background:
+    linear-gradient(180deg, hsla(200, 52.5%, 15.69%, 1) 0%, hsla(200, 52.5%, 15.69%, 0) 32%),
+    linear-gradient(238deg, hsla(180, 16.28%, 16.86%, 1) 2%, hsla(180, 16.28%, 16.86%, 0) 65%),
+    linear-gradient(340deg, hsla(34.51, 100%, 69.85%, 1) 4%, hsla(34.51, 100%, 69.85%, 0) 40%),
+    linear-gradient(135deg, hsla(209, 50.85%, 23.14%, 1) 10%, hsla(209, 50.85%, 23.14%, 0) 84%),
+    linear-gradient(245deg, hsla(180, 59.37%, 84.66%, 1) 100%, hsla(180, 59.37%, 84.66%, 0) 100%);   
 }
 
 * {
@@ -200,4 +210,9 @@ html{
 
 .postfile{
     color:#57e1ff !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
 }
