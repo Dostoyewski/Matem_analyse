@@ -11,7 +11,7 @@ def theory_page(request):
     :return: JSON with objects
     """
     try:
-        query = Post.objects.filter(type=1).order_by('pk')
+        query = Post.objects.filter(type=1).order_by('order_id')
     except ValueError:
         query = []
     num = len(query)
@@ -66,7 +66,7 @@ def practice_page(request):
     :return: JSON with objects
     """
     try:
-        query = Post.objects.filter(type=0).order_by('pk')
+        query = Post.objects.filter(type=0).order_by('order_id')
     except ValueError:
         query = []
     num = len(query)
@@ -104,7 +104,7 @@ def info_page(request):
     :return: JSON with objects
     """
     try:
-        query = Post.objects.filter(type=2).order_by('pk')
+        query = Post.objects.filter(type=2).order_by('published')
     except ValueError:
         query = []
     num = len(query)
