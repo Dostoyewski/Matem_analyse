@@ -10,85 +10,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="{% static 'css/materialize.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/matem_main.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/common.css' %} " />
-    
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/matem_main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/common.css' %} "/>
+
     <!-- <link rel="stylesheet" href="{% static 'css/style_home.css' %}" /> -->
     <!-- <link rel="stylesheet" href="{% static 'css/media-hover-effects.css' %}" /> -->
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Compiled and minified CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-     <!-- Compiled and minified JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-             
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
-<body>      
-    <div style="padding: 1em;">
-        <nav class="nav-extended">
-            <div class="hat white row nav-wrapper abs">
-                <div class="center valign-wrapper hide-on-small-only">
-                    <h3 class="matemhead center">МАТЕРИАЛЫ КУРСА МАТЕМАТИЧЕСКОГО АНАЛИЗА </h3>
-{#                    <h3 class="matemhead center">МАТЕРИАЛЫ КУРСА КОМПЛЕКСНОГО АНАЛИЗА </h3>#}
-                </div>
-    
-                <div class="center valign-wrapper hide-on-med-and-up">
-                    <h4 class="matemhead center">МАТЕРИАЛЫ КУРСА АНАЛИЗА </h4>
-{#                    <h4 class="matemhead center">МАТЕРИАЛЫ КУРСА ТФКП </h4>#}
-                </div>
-
-                <!-- окно поиска информаци -->
-
-                <!-- <div class="col m5 offset-m1 s12 flex-right-toolbar valign-wrapper">
-                    <nav class="white lighten-3 hat-search hoverable">
-                        <div class="nav-wrapper">
-                            <form>
-                                <div class="input-field ">
-                                    <input id="search" type="search" tabindex="1">
-                                    <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
-                                </div>
-                            </form>
-                        </div>
-                    </nav>
-                </div> -->
-
+<body>
+<div style="padding: 1em;">
+    <nav class="nav-extended">
+        <div class="hat white row nav-wrapper abs">
+            <div class="center valign-wrapper hide-on-small-only">
+                <h3 class="matemhead center">МАТЕРИАЛЫ КУРСА МАТЕМАТИЧЕСКОГО АНАЛИЗА </h3>
+                {#                    <h3 class="matemhead center">МАТЕРИАЛЫ КУРСА КОМПЛЕКСНОГО АНАЛИЗА </h3>#}
             </div>
-            <div class="nav-content" style="color: white; !important">
-                <div class="row clr"> 
-                    <div class="col l9 m8">                     
-                        <ul class="tabs tabs-transparent center" >
-                            {#{{ page }}#}
-                        {% if page == 0 %}
-                        <li class="tab"><a class="active pix" href="{% url 'theory_page' %}">Теория</a></li>
-                        <li class="tab"><a class="pix" href="{% url 'practice_page' %}">Практика</a></li>
-                        <li class="tab"><a class="pix" href="{% url 'info_page' %}">Объявления</a></li>
-                        {% elif page == 1 %}
-                        <li class="tab"><a href="{% url 'theory_page' %}">Теория</a></li>
-                        <li class="tab"><a class="active" href="{% url 'practice_page' %}">Практика</a></li>
-                        <li class="tab"><a href="{% url 'info_page' %}">Объявления</a></li>
-                        {% else %}
-                        <li class="tab"><a href="{% url 'theory_page' %}">Теория</a></li>
-                        <li class="tab"><a href="{% url 'practice_page' %}">Практика</a></li>
-                        <li class="tab"><a class="active" href="{% url 'info_page' %}">Объявления</a></li>
-                        {% endif %}
-                        </ul>
+
+            <div class="center valign-wrapper hide-on-med-and-up">
+                <h4 class="matemhead center">МАТЕРИАЛЫ КУРСА АНАЛИЗА </h4>
+                {#                    <h4 class="matemhead center">МАТЕРИАЛЫ КУРСА ТФКП </h4>#}
+            </div>
+
+            <!-- окно поиска информаци -->
+
+            <!-- <div class="col m5 offset-m1 s12 flex-right-toolbar valign-wrapper">
+                <nav class="white lighten-3 hat-search hoverable">
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field ">
+                                <input id="search" type="search" tabindex="1">
+                                <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col l3 m4"></div>
+                </nav>
+            </div> -->
+
+        </div>
+        <div class="nav-content" style="color: white; !important">
+            <div class="row clr">
+                <div class="col l9 m8">
+                    <ul class="tabs tabs-transparent center">
+                        {#{{ page }}#}
+                        {% if page == 0 %}
+                            <li class="tab"><a class="active pix" href="{% url 'theory_page' %}">Теория</a></li>
+                            <li class="tab"><a class="pix" href="{% url 'practice_page' %}">Практика</a></li>
+                            <li class="tab"><a class="pix" href="{% url 'info_page' %}">Объявления</a></li>
+                        {% elif page == 1 %}
+                            <li class="tab"><a href="{% url 'theory_page' %}">Теория</a></li>
+                            <li class="tab"><a class="active" href="{% url 'practice_page' %}">Практика</a></li>
+                            <li class="tab"><a href="{% url 'info_page' %}">Объявления</a></li>
+                        {% else %}
+                            <li class="tab"><a href="{% url 'theory_page' %}">Теория</a></li>
+                            <li class="tab"><a href="{% url 'practice_page' %}">Практика</a></li>
+                            <li class="tab"><a class="active" href="{% url 'info_page' %}">Объявления</a></li>
+                        {% endif %}
+                    </ul>
                 </div>
+                <div class="col l3 m4"></div>
             </div>
-        </nav>
-        <div class="row">
-            <div class="col s12 m8 grid">
-                {#{{ len }}#}
-                {#{{ posts }}#}
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col s12 m8 grid">
+            {#{{ len }}#}
+            {#{{ posts }}#}
             {% for post in posts %}
                 <div class="card blue-grey darken-1 hoverable">
                     <div class="card-content white-text">
-                    <span class="card-title">{{ post.title }}</span>
-                    <p>{{ post.text }}</p>
-                        
+                        <a class="card-title white-text" href="{{ post.file.url }}" target="_blank">{{ post.title }}</a>
+                        <p>{{ post.text }}</p>
+
                     </div>
                     <div class="card-action">
                         <div class="row underpost valign-wrapper">
@@ -97,17 +97,18 @@
                             </div>
                             <div class="col m6 s12 flex-right-toolbar">
                                 {% if post.name_s > 0 %}
-                                    <a class="postfile " href="{{ post.file.url }}" target="_blank">{{ post.file.name }}</a>
+                                    <a class="postfile " href="{{ post.file.url }}"
+                                       target="_blank">{{ post.file.name }}</a>
                                 {% endif %}
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             {% endfor %}
-            </div>
-            <div class="col s12 m4 grid ">
-                <div class="card white darken-1">
-                    <div class="card-content black-text">
+        </div>
+        <div class="col s12 m4 grid ">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
                     <span class="card-title">Моисеев Алексей Александрович</span>
                     <p><b>Ученая степень:</b>
                         кандидат физико-математических наук <br>
@@ -115,36 +116,36 @@
                         доцент <br>
                         <b>Занимаемые должности:</b>
                         доцент - Кафедра высшей математики</p>
-                    </div>
-                    <div class="card-action">
-                        Почта для связи: <br>
+                </div>
+                <div class="card-action">
+                    Почта для связи: <br>
                     <a href="mailto:moiseev_aa@spbstu.ru" class="email">moiseev_aa@spbstu.ru</a>
-                    </div>
-                </div>                
+                </div>
             </div>
-            <div class="col s12 m4 grid right">
-                <div class="card white darken-1 r">
-                    <div class="card-content black-text">
+        </div>
+        <div class="col s12 m4 grid right">
+            <div class="card white darken-1 r">
+                <div class="card-content black-text">
                     <span class="card-title">Новости</span>
                     {% for action in actions %}
                         {% if forloop.counter < 2 %}
                             {{ action }}<br>
                         {% endif %}
                     {% endfor %}
-                    </div>                    
-                </div>                
-            </div>  
-        </div>            
-        
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <p class="grey-text text-lighten-4 right" >© 2020 Moiseev A. A. </p>
-                    </div>                    
                 </div>
             </div>
-        </footer>
-    </div>       
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-4 right">© 2020 Moiseev A. A. </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
